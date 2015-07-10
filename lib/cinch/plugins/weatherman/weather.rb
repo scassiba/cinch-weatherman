@@ -10,14 +10,14 @@ module Cinch
           @data = WeatherUnderground::Base.new.CurrentObservations(location)
           @location = @data.display_location.first.full
           @temp = @data.temperature_string
-          @conditions = @data.weather.downcase
+          @conditions = @data.weather
           @humidity = @data.relative_humidity
           @updated = Time.parse(@data.observation_time).ago.to_words
         end
 
         def to_s
-          "Weather for #{@location}: #{@conditions} #{@temp} Humidity: #{@humidity}" \
-          "(last updated about #{@updated})."
+          "Weather for #{@location}: #{@conditions} #{@temp} Humidity: #{@humidity} " \
+          "(updated #{@updated})."
         end
       end
     end
