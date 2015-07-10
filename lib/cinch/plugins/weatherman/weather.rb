@@ -16,7 +16,7 @@ module Cinch
         end
 
         def to_s
-          "Weather for #{@location}: #{@conditions} #{@temp} Humidity: #{humidity}" \
+          "Weather for #{@location}: #{@conditions} #{@temp} Humidity: #{@humidity}" \
           "(last updated about #{@updated})."
         end
       end
