@@ -17,8 +17,8 @@ module Cinch
         end
 
         def to_s
-          "In #{@location} it is #{@conditions} " \
-          "and #{@temp} with #{@humidity} relative humidity [feels like: #{@feels_like}] (last updated about #{@updated})."
+          "Weather for #{@location}: #{@conditions} #{@temp} Humidity: #{humidity}" \
+          "Feels like #{@feels_like} (last updated about #{@updated})."
         end
       end
     end
